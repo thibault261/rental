@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Rental::Application.load_tasks
+RentalKoolicar::Application.load_tasks

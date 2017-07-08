@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.13'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '0.20'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -30,6 +30,45 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+# ruby templating system for generating JSON, XML ...
+gem 'rabl'
+
+# HTTP 1.1 server for Ruby/Rack applications
+gem 'puma'
+
+# Upload files from Ruby applications
+gem 'carrierwave', '~> 1.0'
+
+# Process jobs in background
+gem 'delayed_job_active_record'
+
+# Design icons
+gem 'material_icons'
+
+# Ruby client for the Google Distance Matrix API
+gem 'google_distance_matrix'
+
+group :development do
+  gem 'pry-rails'
+end
+
+group :development,:test do
+
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx] # link to better_errors
+
+  gem 'quiet_assets' # quiet log message of assets
+
+  gem 'factory_girl_rails', :require => false
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'railroady'
+  gem 'faker'
+
+  gem 'simplecov', :require => false
+
 end
 
 # Use ActiveModel has_secure_password

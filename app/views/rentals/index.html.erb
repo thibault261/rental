@@ -1,0 +1,48 @@
+<h1>Rentals list</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Number</th>
+        <th>Mileage</th>
+        <th>Duration</th>
+        <th>Speed</th>
+        <th>Updated_at</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @rentals.each do |rental| %>
+        <tr>
+          <td><%= rental.name %></td>
+          <td><%= rental.number %></td>
+          <td><%= rental.mileage %></td>
+          <td><%= rental.duration %></td>
+          <td><%= rental.speed %></td>
+          <td><%= rental.updated_at.strftime("%Y-%m-%d : %H:%M:%S") %></td>
+          <td >
+            <span class="show iconStyle">
+              <%= link_to rental, title: 'View', rel: 'tooltip' do %>
+                  <i class="material-icons">visibility</i>
+              <% end %>
+            </span>
+            <span class="edit iconStyle">
+              <%= link_to edit_rental_path(rental), title: 'Edit', rel: 'tooltip' do %>
+                  <i class="material-icons">mode_edit</i>
+              <% end %>
+            </span>
+            <span class="delete iconStyle">
+              <%= link_to rental, method: :delete, data: { confirm: 'Are you sure?' }, title: 'Delete', rel: 'tooltip' do %>
+                  <i class="material-icons">delete_forever</i>
+              <% end %>
+            </span>
+          </td>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<br>

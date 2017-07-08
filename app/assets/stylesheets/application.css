@@ -1,13 +1,114 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
+ *= require material_icons
  *= require_tree .
  */
+
+/***** HEADER *****/
+header{
+  text-align: center;
+}
+/***** HEADER *****/
+
+/***** NAVBAR *****/
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 101px;
+  overflow: auto;
+}
+
+nav li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+ }
+
+nav li a:hover {
+  background-color: #555;
+  color: white;
+ }
+/***** NAVBAR *****/
+
+/***** SECTION *****/
+section {
+  margin-left: 18%;
+  padding:1px 16px;
+  height: 500px;
+  background-color: #f1f1f1;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+    background-color: #0B1B3D;
+    color: white;
+}
+
+.iconStyle a{
+  text-decoration:none;
+
+}
+
+.show a {
+  color: green;
+}
+
+.edit a {
+  color: grey;
+}
+
+.delete a {
+  color: #B22222;
+}
+
+.delete a:hover {
+  color: #8B0000;
+  background-color:transparent;
+}
+
+.edit a:hover {
+  color: #696969;
+  background-color:transparent;
+}
+
+.show a:hover {
+  color: #006400;
+  background-color:transparent;
+}
+
+/***** SECTION *****/
+
+/***** FOOTER *****/
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.alignLeft {
+  float: left;
+}
+
+.alignRight {
+  float: right;
+}
+/***** FOOTER *****/

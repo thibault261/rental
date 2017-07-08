@@ -1,0 +1,16 @@
+<h1>New rental : calculate mileage</h1>
+
+<div>
+  <span>
+    <%= form_for @rental, url: {action: "create"} do |f| %>
+      <div>
+        Rental name* :<%= f.text_field :name, placeholder: 'Enter location name...', required: true %> <br>
+        Upload positions (csv)* : <%= f.file_field :input_file, required: true %><br><br>
+      </div>
+
+      <div>
+         <%= f.submit 'Calculate' %>
+      </div>
+    <% end %>
+  </span>
+</div>

@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rental</title>
+  <title>Rental Koolicar</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
 
-<%= yield %>
+  <header>
+    <h1>Rental Interface</h1>
+    <%# image_tag("logo_koolicar.jpg", :alt => "rss feed", :width => "25%") %>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/rentals/new">New rental</a></li>
+      <li><a href="/rentals">Rentals list</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <%= yield %>
+  </section>
+
+  <footer>
+    <div>
+      <span class="alignLeft">Thibault Martin</span>
+      <span class="alignRight">Juillet 2017</span>
+    </div>
+  </footer>
 
 </body>
 </html>

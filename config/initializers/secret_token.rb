@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Rental::Application.config.secret_key_base = '0f4e12c541e6d1abe778dcc6c92f27df2143be9f1b97daf900468955e5affd73c67764ae9c07278670db64134c63fc75569087538d2ca68d4a097356684c07bb'
+RentalKoolicar::Application.config.secret_key_base = '0f4e12c541e6d1abe778dcc6c92f27df2143be9f1b97daf900468955e5affd73c67764ae9c07278670db64134c63fc75569087538d2ca68d4a097356684c07bb'
