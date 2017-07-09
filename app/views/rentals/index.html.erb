@@ -1,11 +1,11 @@
-<h1>Rentals list</h1>
-
-  <table>
-    <thead>
+<div class="panel panel-default">
+  <h2 class="panel-heading">Rentals list</h2>
+  <table class="table table-hover table-bordered panel-body">
+    <thead >
       <tr>
         <th>Name</th>
         <th>Number</th>
-        <th>Mileage</th>
+        <th>Kilometers </th>
         <th>Duration</th>
         <th>Speed</th>
         <th>Updated_at</th>
@@ -22,20 +22,22 @@
           <td><%= rental.duration %></td>
           <td><%= rental.speed %></td>
           <td><%= rental.updated_at.strftime("%Y-%m-%d : %H:%M:%S") %></td>
-          <td >
-            <span class="show iconStyle">
+          <td>
+            <span class="showIcon">
               <%= link_to rental, title: 'View', rel: 'tooltip' do %>
-                  <i class="material-icons">visibility</i>
+                  <i class="glyphicon glyphicon-eye-open"></i>
               <% end %>
             </span>
-            <span class="edit iconStyle">
+
+            <span class="editIcon">
               <%= link_to edit_rental_path(rental), title: 'Edit', rel: 'tooltip' do %>
-                  <i class="material-icons">mode_edit</i>
+                  <i class="glyphicon glyphicon-edit"></i>
               <% end %>
             </span>
-            <span class="delete iconStyle">
+
+            <span class="deleteIcon">
               <%= link_to rental, method: :delete, data: { confirm: 'Are you sure?' }, title: 'Delete', rel: 'tooltip' do %>
-                  <i class="material-icons">delete_forever</i>
+                  <i class="glyphicon glyphicon-trash"></i>
               <% end %>
             </span>
           </td>
@@ -44,5 +46,4 @@
       <% end %>
     </tbody>
   </table>
-
-<br>
+</div>

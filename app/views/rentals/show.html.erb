@@ -1,9 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <h2 class="panel-heading">Rental page</h2>
 
-<p>
-  <strong>Name:</strong>
-  <%= @rental.name %>
-</p>
+  <div class="panel-body">
+    <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_rental_path(@rental) %> |
-<%= link_to 'Back', rentals_path %>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Name:</label>
+        <div class="col-sm-10">
+          <p class="form-control-static"><%= @rental.name %></p>
+        </div>
+        <label class="control-label col-sm-2" >Number:</label>
+        <div class="col-sm-10">
+          <p class="form-control-static"><%= @rental.number %></p>
+        </div>
+        <label class="control-label col-sm-2" >Mileage:</label>
+        <div class="col-sm-10">
+          <p class="form-control-static"><%= @rental.mileage %></p>
+        </div>
+        <label class="control-label col-sm-2" >Duration:</label>
+        <div class="col-sm-10">
+          <p class="form-control-static"><%= @rental.duration %></p>
+        </div>
+        <label class="control-label col-sm-2" >Speed:</label>
+        <div class="col-sm-10">
+          <p class="form-control-static"><%= @rental.speed %></p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-11">
+          <%= link_to 'Edit', edit_rental_path(@rental), class:"btn btn-primary" %>
+          <%= link_to 'Back', rentals_path, class:"btn btn-default" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,16 +1,28 @@
-<h1>New rental : calculate mileage</h1>
+<div class="panel panel-default">
+  <h2 class="panel-heading">Create a rental</h2>
 
-<div>
-  <span>
-    <%= form_for @rental, url: {action: "create"} do |f| %>
-      <div>
-        Rental name* :<%= f.text_field :name, placeholder: 'Enter location name...', required: true %> <br>
-        Upload positions (csv)* : <%= f.file_field :input_file, required: true %><br><br>
+  <%= form_for @rental, :html => {:class => "form-horizontal"}, url: {action: "create"} do |f| %>
+    <div class="panel-body">
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Rental name* :</label>
+        <div class="col-sm-10">
+          <%= f.text_field :name, placeholder: 'Enter location name...', required: true, class: "form-control" %>
+        </div>
       </div>
 
-      <div>
-         <%= f.submit 'Calculate' %>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">File input*</label>
+        <div class="col-sm-10">
+          <%= f.file_field :input_file, required: true, type: "file", id: "exampleInputFile" %>
+          <p class="help-block">Select postions (csv)</p>
+        </div>
       </div>
-    <% end %>
-  </span>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>

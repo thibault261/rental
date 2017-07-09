@@ -6,8 +6,11 @@ gem 'rails', '4.0.13'
 # Use postgresql as the database for Active Record
 gem 'pg', '0.20'
 
+# Use bootstrap SASS for stylesheets
+gem 'bootstrap-sass', '~> 3.3.6'
+
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.2'
+gem 'sass-rails', '>= 3.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -44,11 +47,7 @@ gem 'carrierwave', '~> 1.0'
 # Process jobs in background
 gem 'delayed_job_active_record'
 
-# Design icons
-gem 'material_icons'
-
-# Ruby client for the Google Distance Matrix API
-gem 'google_distance_matrix'
+gem 'time_difference'
 
 group :development do
   gem 'pry-rails'

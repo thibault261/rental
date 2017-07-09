@@ -1,0 +1,62 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/***** HEADER *****/
+header{
+  text-align: center;
+}
+
+header hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(83, 148, 227, 1), rgba(0,0,0,0));
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(121, 182, 199, 1), rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(121, 182, 199, 1), rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(121, 182, 199, 1), rgba(0,0,0,0));
+}
+/***** HEADER *****/
+
+/***** NAVBAR *****/
+
+/***** NAVBAR *****/
+
+/***** SECTION *****/
+section h2 {
+  margin-top: 0;
+}
+
+.editIcon a {
+  color: grey;
+}
+
+.deleteIcon a {
+  color: #B22222;
+}
+
+.showIcon a {
+  color: green;
+}
+
+.editIcon a:hover {
+  color: #696969;
+  background-color:transparent;
+  text-decoration: none;
+}
+
+.deleteIcon a:hover {
+  color: #8B0000;
+  background-color:transparent;
+  text-decoration: none;
+}
+
+.showIcon a:hover {
+  color: #006400;
+  background-color:transparent;
+  text-decoration: none;
+}
+
+/***** SECTION *****/
+
+/***** FOOTER *****/
+/***** FOOTER *****/

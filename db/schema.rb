@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170708230736) do
     t.string   "input_file"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "duration"
+    t.string   "duration"
     t.integer  "speed"
   end
 
