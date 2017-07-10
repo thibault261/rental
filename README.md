@@ -8,10 +8,14 @@ Calculates the mileage, the duration and the average speed of rentals from these
 - rails installed (i used Rails 4.0.13)
 - ruby installed (i used Ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux])
 - git installed (i used Git 2.7.4)
+- postgres installed (i used PostgreSQL 9.3.13)
 
 ### Clone the repository
 - Clone the project repository `git clone https://github.com/thibault261/rental.git`
 - Change directory `cd rental`
+
+### Install gem
+- Install application gem by running `bundle install`
 
 ### Create postgres User
 - Connect to postgres `sudo -u postgres psql` (your password will be asked)
