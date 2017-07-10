@@ -58,6 +58,7 @@ A défaut de temps pour réaliser tout ce que j'avais en tête, j'ai repéré ce
 #### Improvements
 - Réaliser des tests avec les gem 'Rspec' et 'factory_girl' pour le model, le controller et le routing de Rental.
 - Réaliser un script de déploiement automatique
+- Gestion d'erreur plus fine (creation de classe d'erreur, etc ..)
 
 ## Note 
 - J'utilise une clé gratuite afin de requêter les différentes API Google. Cette dernière limite le nombre de requêtes à 2500/jour. Si vous dépassez ce quota là (ce qui reviendrait à importer de très nombreuses fois les fichiers de tests), cela risque de ne plus marcher. Si tel est le cas, ou pour toutes autres questions, n'hésitez pas à me joindre à l'adresse suivante : thibault.martin30@gmail.com .
