@@ -39,7 +39,7 @@ A défaut de temps pour réaliser tout ce que j'avais en tête, j'ai repéré ce
 
 ### User Interface
 - Mettre un loader lors de l'upload du fichier CSV
-- Afficher le tracé du trajet sur la page d'une location (Permet notament de voir les erreurs de positionnement GPS, cf. plus bas) à l'aide de 'Maps JavaScript API' (https://developers.google.com/maps/documentation/javascript/?hl=fr)
+- Afficher le tracé du trajet sur la page d'une location (Permet notamment de voir les erreurs de positionnement GPS, cf. plus bas) à l'aide de 'Maps JavaScript API' (https://developers.google.com/maps/documentation/javascript/?hl=fr)
 - Ergonomie globale à améliorer
 
 ### Server
