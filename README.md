@@ -34,8 +34,8 @@ Calculates the mileage, the duration and the average speed of rentals from these
 - Connect to this URL `http://localhost:3000/`
 - That's it ! You can interact with the application
 
-## Improvements & Optimization
-A défaut de temps pour réaliser tout ce que j'avais en tête, j'ai repéré certaines améliorations :
+## Improvements & Optimizations
+A défaut de temps pour réaliser tout ce que j'avais envisagé, j'ai repéré certaines améliorations que vous trouverez ci-dessous. En effet, j'ai axé mon travail afin d'être le plus précis et pertinent possible dans le calcul du kilométrage. J'ai testé pas mal de solutions avant de m'arrêter sur une qui reste perfectible. Nous aurons l'occasion d'en discuter plus longuement lors de mon prochain entretien.  
 
 ### User Interface
 - Mettre un loader lors de l'upload du fichier CSV
@@ -45,15 +45,15 @@ A défaut de temps pour réaliser tout ce que j'avais en tête, j'ai repéré ce
 ### Server
 
 #### Performances
-- Réduire le nombre de requêtes envoyées à 'Distance Matrix API'. On aurait pu requêter 'Direction API' (https://developers.google.com/maps/documentation/directions/intro?hl=fr#Waypoints) en envoyant en paramètre des coordonnées de waypoints/point de cheminements (23 au maximum), cependant cette API est "gourmande" en temps de calcul.
+- Réduire le nombre de requêtes envoyées à 'Distance Matrix API'. On aurait pu passer par 'Direction API' (https://developers.google.com/maps/documentation/directions/intro?hl=fr#Waypoints) en envoyant en paramètre des coordonnées de waypoints/point de cheminements (23 au maximum), cependant cette API est "gourmande" en temps de calcul.
 
 - Utiliser le gem 'em-http-request' (requêtes HTTP asynchrones, Keep-Alive, pipelining, ... ) plutôt que les thread pour gagner du temps lors des nombreux appel à 'Distance Matrix API' (https://developers.google.com/maps/documentation/distance-matrix/intro?hl=fr)
 
 - Utiliser le gem 'delayed_job' afin d'exécuter en arrière-plan et de manière synchrone les tâches de creation de 'Rental'. Rapide à mettre en place côté serveur, mais il m'a manqué de temps pour faire une interface dédiée qui soit "propre".
 
 #### Optimizations
-- Utiliser 'Roads API' (https://developers.google.com/maps/documentation/roads/snap?hl=fr) afin d'affiner les points récupérés depuis le fichier CSV avant de les envoyer à 'Distance Matrix API'. En effet, il peut (et il y a dans les deux fichiers de tests) des erreurs de localisation liées à la précision de l'appareil GPS utilisé. On peut par exemple avoir un point (latitude/longitude) qui est signalé à 10 mètres de la position réelle du véhicule, le plaçant ainsi de l'autre côté de la route, dans l'autre sens. Si on conserve ce point lors des calculs avec l'API 'Distance Matrix', cela va fausser notre calcul du kilométrage.
-
+- (Amélioration réalisée et présente dans la version actuelle) Utiliser 'Roads API' (https://developers.google.com/maps/documentation/roads/snap?hl=fr) afin d'affiner les points récupérés depuis le fichier CSV avant de les envoyer à 'Distance Matrix API'. En effet, il peut (et il y a dans les deux fichiers de tests) des erreurs de localisation liées à la précision de l'appareil GPS utilisé. On peut par exemple avoir un point (latitude/longitude) qui est signalé à 10 mètres de la position réelle du véhicule, le plaçant ainsi de l'autre côté de la route, dans l'autre sens. Si on conserve ce point lors des calculs avec l'API 'Distance Matrix', cela va fausser notre calcul du kilométrage.
+Nous pourrons discuter des résultats obtenus avant optimisation et ceux obtenus après, il y a matière à réfléchir selon le jeu de données. 
 
 #### Improvements
 - Réaliser des tests avec les gem 'Rspec' et 'factory_girl' pour le model, le controller et le routing de Rental.
