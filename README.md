@@ -45,6 +45,8 @@ A défaut de temps pour réaliser tout ce que j'avais en tête, j'ai repéré ce
 ### Server
 
 #### Performances
+- Réduire le nombre de requêtes envoyées à 'Distance Matrix API'. On aurait pu requêter 'Direction API' (https://developers.google.com/maps/documentation/directions/intro?hl=fr#Waypoints) en envoyant en paramètre des coordonnées de waypoints/point de cheminements (23 au maximum), cependant cette API est "gourmande" en temps de calcul.
+
 - Utiliser le gem 'em-http-request' (requêtes HTTP asynchrones, Keep-Alive, pipelining, ... ) plutôt que les thread pour gagner du temps lors des nombreux appel à 'Distance Matrix API' (https://developers.google.com/maps/documentation/distance-matrix/intro?hl=fr)
 
 - Utiliser le gem 'delayed_job' afin d'exécuter en arrière-plan et de manière synchrone les tâches de creation de 'Rental'. Rapide à mettre en place côté serveur, mais il m'a manqué de temps pour faire une interface dédiée qui soit "propre".
