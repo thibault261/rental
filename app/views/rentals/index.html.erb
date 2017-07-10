@@ -3,11 +3,11 @@
   <table class="table table-hover table-bordered panel-body">
     <thead >
       <tr>
-        <th>Name</th>
         <th>Number</th>
-        <th>Kilometers </th>
+        <th>Name</th>
+        <th>Mileage (km)</th>
         <th>Duration</th>
-        <th>Speed</th>
+        <th>Average speed (km/h)</th>
         <th>Updated_at</th>
         <th>Actions</th>
       </tr>
@@ -16,8 +16,8 @@
     <tbody>
       <% @rentals.each do |rental| %>
         <tr>
-          <td><%= rental.name %></td>
           <td><%= rental.number %></td>
+          <td><%= rental.name %></td>
           <td><%= rental.mileage %></td>
           <td><%= rental.duration %></td>
           <td><%= rental.speed %></td>

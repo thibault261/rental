@@ -1,5 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Rental, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe ::Rental, type: :model do
+  before (:each) do
+  end
 end

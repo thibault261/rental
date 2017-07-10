@@ -3,7 +3,7 @@ class CreateRentals < ActiveRecord::Migration
     create_table :rentals do |t|
       t.string :name
       t.integer :number
-      t.integer :mileage
+      t.float :mileage
       t.string :input_file
 
       t.timestamps

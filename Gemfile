@@ -35,9 +35,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# ruby templating system for generating JSON, XML ...
-gem 'rabl'
-
 # HTTP 1.1 server for Ruby/Rack applications
 gem 'puma'
 
@@ -48,6 +45,9 @@ gem 'carrierwave', '~> 1.0'
 gem 'delayed_job_active_record'
 
 gem 'time_difference'
+
+# Async (EventMachine) HTTP client (used for Keep-Alive and HTTP pipelining support)
+gem 'em-http-request'
 
 group :development do
   gem 'pry-rails'
@@ -60,7 +60,7 @@ group :development,:test do
 
   gem 'quiet_assets' # quiet log message of assets
 
-  gem 'factory_girl_rails', :require => false
+  gem 'factory_girl_rails'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'railroady'
@@ -69,15 +69,3 @@ group :development,:test do
   gem 'simplecov', :require => false
 
 end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
