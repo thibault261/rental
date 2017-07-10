@@ -49,6 +49,6 @@ A défaut de temps pour réaliser tout ce que j'avais en tête, j'ai repéré ce
 - Utiliser 'Roads API' (https://developers.google.com/maps/documentation/roads/snap?hl=fr) afin d'affiner les points récupérés depuis le fichier CSV avant de les envoyer à 'Distance Matrix API'. En effet, il peut (et il y a dans les deux fichiers de tests) des erreurs de localisation liée à la précision de l'appareil GPS utilisé. On peut par exemple avoir un point (latitude/longitude) qui est signalé à 10 mètre de la position réelle du véhicule, le plaçant ainsi de l'autre côté de la route, dans l'autre sens. Si on conserve ce point lors des calculs avec l'API 'Distance Matrix', cela va fausser notre calcul du kilométrage.
 
 
-### Improvements
+#### Improvements
 - Réaliser des tests avec le gem 'Rspec' et l'aide de 'factory girl' pour le model, le controller et le routing de Rental.
 - Réaliser un script de déploiement automatique
