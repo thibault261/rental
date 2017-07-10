@@ -30,12 +30,12 @@ Calculates the mileage, the duration and the average speed of rentals from these
 - Connect to this URL `http://localhost:3000/`
 - That's it ! You can interact with the application
 
-## Reflections/Improvements
+## Improvements & Optimization
 A défaut de temps pour réaliser tout ce que j'avais en tête, j'ai repéré certaines améliorations :
 
 ### User Interface
 - Mettre un loader lors de l'upload du fichier CSV
-- Afficher le tracé du trajet sur la page d'une location (Permet notament de voir les erreurs de positionnement GPS) à l'aide de 'Maps JavaScript API' (https://developers.google.com/maps/documentation/javascript/?hl=fr)
+- Afficher le tracé du trajet sur la page d'une location (Permet notament de voir les erreurs de positionnement GPS, cf. plus bas) à l'aide de 'Maps JavaScript API' (https://developers.google.com/maps/documentation/javascript/?hl=fr)
 - Ergonomie globale à améliorer
 
 ### Server
@@ -45,7 +45,10 @@ A défaut de temps pour réaliser tout ce que j'avais en tête, j'ai repéré ce
 
 - Utiliser le gem 'delayed_job' afin d'exécuter en arrière-plan et de manière synchrone les tâches de creation de 'Rental'. Rapide à mettre en place côté serveur, mais il m'a manqué de temps pour faire une interface dédiée qui soit "propre".
 
-#### Improvements
-- Utiliser 'Roads API' (https://developers.google.com/maps/documentation/roads/snap?hl=fr) afin d'affiner les points récupérés depuis le fichier CSV avant de les envoyer à 'Distance Matrix API'. En effet, il peut (et il y a dans les deux fichiers de tests) des erreurs de localisation liée à la précision de l'appareil GPS utilisé. On peut par exemple avoir un point (latitude/longitude) qui est signalé à 10 mètre de la position réelle du véhicule, le plaçant ainsi de l'autre côté de la route, dans l'autre sens. Si on conserve ce point lors des calculs avec l'API 'Distance Matrix', cela va fausser 
+#### Optimizations
+- Utiliser 'Roads API' (https://developers.google.com/maps/documentation/roads/snap?hl=fr) afin d'affiner les points récupérés depuis le fichier CSV avant de les envoyer à 'Distance Matrix API'. En effet, il peut (et il y a dans les deux fichiers de tests) des erreurs de localisation liée à la précision de l'appareil GPS utilisé. On peut par exemple avoir un point (latitude/longitude) qui est signalé à 10 mètre de la position réelle du véhicule, le plaçant ainsi de l'autre côté de la route, dans l'autre sens. Si on conserve ce point lors des calculs avec l'API 'Distance Matrix', cela va fausser notre calcul du kilométrage.
 
+
+### Improvements
 - Réaliser des tests avec le gem 'Rspec' et l'aide de 'factory girl' pour le model, le controller et le routing de Rental.
+- Réaliser un script de déploiement automatique
