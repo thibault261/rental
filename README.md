@@ -5,9 +5,9 @@ Calculates the mileage, the duration and the average speed of rentals from these
 
 ## Installation
 ### Prerequisites
-- rails installed (i used Rails 4.0.13)
-- ruby installed (i used Ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux])
-- git installed (i used Git 2.7.4)
+- rails installed (I used Rails 4.0.13)
+- ruby installed (I used Ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux])
+- git installed (I used Git 2.7.4)
 - postgres installed (i used PostgreSQL 9.3.13)
 
 ### Clone the repository
