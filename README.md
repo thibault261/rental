@@ -2,13 +2,13 @@
 
 ## Introduction
 Calculates the mileage, the duration and the average speed of rentals from these positions (CSV format).
- 
-## Prerequisites
+
+## Installation
+### Prerequisites
 - rails installed (i used Rails 4.0.13)
 - ruby installed (i used Ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux])
 - git installed (i used Git 2.7.4)
 
-## Installation
 ### Clone the repository
 - Clone the project repository `git clone https://github.com/thibault261/rental.git`
 - Change directory `cd rental`
@@ -50,5 +50,10 @@ A défaut de temps pour réaliser tout ce que j'avais en tête, j'ai repéré ce
 
 
 #### Improvements
-- Réaliser des tests avec le gem 'Rspec' et l'aide de 'factory girl' pour le model, le controller et le routing de Rental.
+- Réaliser des tests avec les gem 'Rspec' et 'factory_girl' pour le model, le controller et le routing de Rental.
 - Réaliser un script de déploiement automatique
+
+## Note 
+- J'utilise une clé gratuite afin de requêter les différentes API Google. Cette dernière limite le nombre de requêtes à 2500/jour. Si vous dépassez ce quota là (ce qui reviendrait à importer de très nombreuses fois les fichiers de tests), cela risque de ne plus marcher. Si tel est le cas, ou pour toutes autres questions, n'hésitez pas à me joindre à l'adresse suivante : thibault.martin30@gmail.com .
+
+##### Thibault Martin
